@@ -15,9 +15,41 @@
         <h1>Medicine Tracker</h1>
     </header>
     <main>
-
     </main>
     <script src="script.js"></script>
-    </body>
+    <ul></ul>
+    <h3>Create new medicine:</h3>
+    <!--create a form for the user to enter data to send to the 'create' backend endpoint-->
+    <form class='create_medicine_form'>
+        <section class = "singleBox">
+            <label for="name"> Name: </label> <br>
+            <input name = "name" type = "text" id = 'name' placeholder = "name"> <br>
+        </section>
+        <section class = "singleBox">
+            <label for="price"> Price: </label> <br>
+            <input name = "price" type = "float" id = 'price' placeholder = 0>  <br>
+        </section>
+        <input class= "cta-button" type = "submit" value = "Create Medicine"> <br>
+    </form>
+
+    <script>
+        //retrieve the data from the form
+        const formEl = document.querySelector('.create_medicine_form');
+
+        //runs the code below when the form is submitted
+        formEl.addEventListener('submit', event => {
+            const formData = new FormData(formEl);
+
+            //send the formData object to the '/create' endpoint
+            fetch('http://localhost:8000/create', {
+                method: 'POST',
+                body: formData
+            })
+            //handle the response
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+        });
+     </script>
 </body>
 </html>
