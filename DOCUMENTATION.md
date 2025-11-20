@@ -2,7 +2,7 @@
 
 
 ## Approach
-I worked through the objectives in order as the first two are somewhat interlinked. First, I fetched data from the backend server to the frontend and displayed the name and price of each medicine through the 'index.html' file. I then altered which values were being displayed to exlude the values that were either null or blank to ensure that there were no gaps in the data that was being displayed. For objective three, I allowed the user to create a new medicine through the creation of a form and the subsequent transfer of that form data to the backend to be processed. During this challenge, I utilised tutorials whilst attempting to send data between the backend and frontend of the application.
+I worked through the objectives in order as the first two are somewhat interlinked. First, I fetched data from the backend server to the frontend and displayed the name and price of each medicine through the 'index.html' file. I then altered which values were being displayed to exclude the values that were either null or blank to ensure that there were no gaps in the data that was being displayed. For objective three, I allowed the user to create a new medicine through the creation of a form and the subsequent transfer of that form data to the backend to be processed. During this challenge, I utilised tutorials whilst attempting to send data between the backend and frontend of the application.
 
 
 ## Problems Faced
